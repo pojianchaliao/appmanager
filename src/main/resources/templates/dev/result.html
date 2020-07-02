@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+
+    <title>注册页面</title>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/css/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/css/green.css}" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/css/jqvmap.min.css}" rel="stylesheet"/>
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/custom.min.css}" rel="stylesheet">
+    <!-- add localcss 2016-8-21 -->
+    <link th:href='@{/localcss/applist.css}' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+    <script  th:src="@{/js/jquery.js}"></script>
+</head>
+<body>
+    <p th:text="${msg}"></p>
+    <a th:text="返回登陆" id="back"></a>
+</body>
+
+<script>
+    $(function(){
+        $("#back").on("click",function(){
+            window.location.href = "login";
+        });
+    });
+
+</script>
+</html>

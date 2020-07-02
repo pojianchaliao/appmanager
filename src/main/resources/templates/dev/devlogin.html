@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>开发者管理系统</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+
+    <title>APP开发者管理系统</title>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/css/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/css/green.css}" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/css/jqvmap.min.css}" rel="stylesheet"/>
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/custom.min.css}" rel="stylesheet">
+    <!-- add localcss 2016-8-21 -->
+    <link th:href='@{/localcss/applist.css}' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+    <script  th:src="@{/js/jquery.js}"></script>
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form th:action="@{/dev/dologin}" method="post">
+                    <h1>开发者管理系统</h1>
+                    <div>
+                        <input type="text" class="form-control" name="userCode" placeholder="请输入用户名" required="" />
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" name="userPassword" placeholder="请输入密码" required="" />
+                    </div>
+                    <span th:value="${error}"></span>
+                    <div>
+                        <button type="submit" class="btn btn-success">登     录</button>
+                        <button type="reset" class="btn btn-default">重　填</button>
+                        <button  type="button" class="btn btn-upload" id="register">注册</button>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <div>
+                            <p>©2016 All Rights Reserved. </p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    $("#register").on("click",function () {
+        window.location.href="register";
+    });
+
+</script>
+</html>
